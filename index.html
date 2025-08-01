@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1> Resume Generator </h1>
+  <form onsubmit="generateResume(event)">
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <input type="text" id="skills" placeholder="Enter skills (comma separated)" required>
+    <input type="text" id="certification" placeholder="Enter certifications" required>
+    <input type="text" id="experience" placeholder="Enter experience" required>
+    <button type="submit">Generate Resume</button>
+  </form>
+
+  <div id="resume">
+    <h2>Resume Preview</h2>
+    <p id="r-name">Name:</p>
+    <p id="r-email">Email:</p>
+    <p id="r-skills">Skills:</p>
+    <p id="r-certification">Certification:</p>
+    <p id="r-experience">Experience:</p>
+  </div>
+
+  <!-- PDF download button -->
+  <button onclick="downloadPDF()">Download as PDF</button>
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
